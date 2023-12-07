@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: #f0f0f0;
+    /* Light background to enhance visibility of animations */
+}
+
+h1 {
+    color: #007BFF;
+    animation: pulseColor 2s infinite;
+}
+
+.section {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* subtle shadow for depth */
+    background-color: white;
+    /* White background for readability */
+    position: relative;
+    overflow: hidden;
+    animation: borderGlow 2s infinite alternate;
+}
+
+.label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 60px;
+    font-size: 16px;
+    border: 2px solid #007BFF;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    transform: scale(1.1);
+}
+
+button {
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+}
+
+#timer,
+#bmiResult,
+#sumResult {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+#timeDisplay,
+#bmiValue,
+#sumValue {
+    font-weight: bold;
+    color: #FF5733;
+    animation: textColorChange 3s infinite;
+}
+
+/* Animations */
+@keyframes pulseColor {
+    0% {
+        color: #007BFF;
+    }
+
+    50% {
+        color: #00FF00;
+    }
+
+    100% {
+        color: #007BFF;
+    }
+}
+
+@keyframes borderGlow {
+    0% {
+        border-color: red;
+    }
+
+    33% {
+        border-color: blue;
+    }
+
+    66% {
+        border-color: green;
+    }
+
+    100% {
+        border-color: red;
+    }
+}
+
+@keyframes textColorChange {
+    0% {
+        color: #FF5733;
+    }
+
+    50% {
+        color: #007BFF;
+    }
+
+    100% {
+        color: #FF5733;
+    }
+}
