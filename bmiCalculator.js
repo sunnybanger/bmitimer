@@ -16,7 +16,7 @@ function calculateBMI() {
 
     if (weight > 0 && height > 0) {
         const bmi = weight / (height * height);
-        bmiValueDisplay.value = `Your BMI: ${bmi.toFixed(2)}`; // Display BMI result
+        bmiValueDisplay.value = '${bmi.toFixed(2)}`; // Display BMI result
     } else {
         bmiValueDisplay.value = 'Please enter valid values'; // Display error message
     }
