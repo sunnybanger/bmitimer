@@ -2,12 +2,13 @@
 const weightInput = document.getElementById('weight');
 const heightInput = document.getElementById('height');
 const calculateBMIButton = document.getElementById('calculateBMI');
-const bmiValueDisplay = document.getElementById('bmiValue');
+const bmiValueDisplay = document.querySelector('#bmiValue span');
 
 // Sum Calculator Elements
 const numberOne = document.getElementById('numberone');
 const numberTwo = document.getElementById('numbertwo');
-const sumValueDisplay = document.getElementById('sumValue');
+const calculateSumButton = document.getElementById('sumbtn');
+const sumValueDisplay = document.querySelector('#sumValue span');
 
 // Function to calculate and display BMI
 function calculateBMI() {
@@ -16,17 +17,18 @@ function calculateBMI() {
 
     if (weight > 0 && height > 0) {
         const bmi = weight / (height * height);
-        bmiValueDisplay.value = `Your BMI: ${bmi.toFixed(2)}`; // Display BMI result
+        bmiValueDisplay.textContent = bmi.toFixed(2); // Display BMI result
     } else {
-        bmiValueDisplay.value = 'Please enter valid values'; // Display error message
+        bmiValueDisplay.textContent = 'Please enter valid values'; // Display error message
     }
 }
 
 // Function to calculate and display sum
 function calculateSum() {
     const sum = Number(numberOne.value) + Number(numberTwo.value);
-    sumValueDisplay.value = `Sum: ${sum}`; // Display sum result
+    sumValueDisplay.textContent = sum; // Display sum result
 }
 
-// Event Listener for the Calculate BMI button
+// Event Listeners
 calculateBMIButton.addEventListener('click', calculateBMI);
+calculateSumButton.addEventListener('click', calculateSum);
