@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Calculators</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <h1>Health Calculators</h1>
 
@@ -16,10 +14,13 @@
         <h2>BMI Calculator</h2>
         <label for="weight">Weight (kg):</label>
         <input type="number" id="weight" min="1" required>
+        <br>
         <label for="height">Height (cm):</label>
         <input type="number" id="height" min="1" required>
+        <br>
         <button id="calculateBMI">Calculate BMI</button>
-        <input type="text" id="bmiValue" disabled> <!-- Display BMI result -->
+        <br>
+        <p id="bmiValue">Your BMI: <span></span></p> <!-- Display BMI result -->
     </div>
 
     <!-- Sum Calculator -->
@@ -28,12 +29,10 @@
         <input type="number" id="numberone" value="0">
         <p style="display: inline; color:snow;"> + </p>
         <input type="number" id="numbertwo" value="0">
-        <button id="sumbtn" onclick="calculateSum()">Sum UP!</button>
-        <input type="text" id="sumValue" disabled> <!-- Display Sum result -->
+        <button id="sumbtn">Sum UP!</button>
+        <p id="sumValue">Sum: <span></span></p> <!-- Display Sum result -->
     </div>
 
-    <script src="bmiCalculator.js" type="text/javascript"></script>
-    <script src="sumCalculator.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
 </body>
-
 </html>
