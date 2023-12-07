@@ -16,16 +16,16 @@ function calculateBMI() {
 
     if (weight > 0 && height > 0) {
         const bmi = weight / (height * height);
-        bmiValueDisplay.value = '${bmi.toFixed(2)}`; // Display BMI result
+        bmiValueDisplay.textContent = bmi.toFixed(2); // Display BMI result as text
     } else {
-        bmiValueDisplay.value = 'Please enter valid values'; // Display error message
+        bmiValueDisplay.textContent = 'Please enter valid values'; // Display error message
     }
 }
 
 // Function to calculate and display sum
 function calculateSum() {
     const sum = Number(numberOne.value) + Number(numberTwo.value);
-    sumValueDisplay.value = `Sum: ${sum}`; // Display sum result
+    sumValueDisplay.textContent = `Sum: ${sum}`; // Display sum result as text
 }
 
 // Event Listener for the Calculate BMI button
